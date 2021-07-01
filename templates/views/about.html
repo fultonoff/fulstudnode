@@ -23,6 +23,33 @@
       <link rel="stylesheet" href="css/style.css">
    </head>
    <body>
+      <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "106322061707843");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v11.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
       
       <!-- Translate Start-->
 
@@ -88,7 +115,7 @@
                               
                            </li>
                            <li>
-                              <a href="https://blog.fulstud.com/" target="_blank">Blog</a>
+                              <a href="/how-to-apply" >Admission</a>
 
                               
                            </li>
@@ -202,9 +229,9 @@
                            <img src="img/services/home-4/services-1.png" alt="">
                         </div>
                         <div class="services__content-4">
-                           <h3 class="services__title-4"><a href="/visa">Country</a></h3>
+                           <h3 class="services__title-4"><a href="/visa">Registration</a></h3>
                            <p>You dream to study abroad, but have no idea where to start? We will do everything for you including the reception on arrival. Let’s go?</p>
-                           <a href="/visa"link-btn">More<i class="arrow_right"></i> </a>
+                           <a href="/how-to-apply" class="link-btn">Read More<i class="arrow_right"></i> </a>
                         </div>
                      </div>
                   </div>
@@ -214,9 +241,9 @@
                            <img src="img/services/home-4/services-2.png" alt="">
                         </div>
                         <div class="services__content-4">
-                           <h3 class="services__title-4"><a href="/visa">University</a></h3>
+                           <h3 class="services__title-4"><a href="/visa">Visa</a></h3>
                            <p>We only choose best universities for you and some countries offer Scholarships</p>
-                           <a href="/contact" class="link-btn">Contact<i class="arrow_right"></i> </a>
+                           <a href="/visa" class="link-btn">Read More<i class="arrow_right"></i> </a>
                         </div>
                      </div>
                   </div>
@@ -239,7 +266,7 @@
                            <li>Internationally recognized universties only are selected, quality Higher Education Institutions and effective teaching methods.</li>
                            <li>We select the most affordable countries in terms of living expenses of personal financial satisfaction.</li>
                         </ul>
-                        <a href="/contact" class="w-btn w-btn-3 w-btn-1">Get Started</a>
+                        <a href="/how-to-apply" class="w-btn w-btn-3 w-btn-1">Get Started</a>
                      </div>
                   </div>
                   <div class="col-xxl-6 offset-xxl-1 col-xl-6 col-lg-6 wow fadeInRight" data-wow-delay=".7s">
@@ -347,7 +374,7 @@
                      <div class="promotion__content pl-70 promotion__right wow fadeInUp" data-wow-delay=".5s">
                         <h3 class="promotion__title">Looking for a <br> Partnership?</h3>
                         <p>Contact us</p>
-                        <a href="/about" class="w-btn w-btn-8">Contact</a>
+                        <a href="/contact" class="w-btn w-btn-8">Contact</a>
                      </div>
                   </div>
                </div>
@@ -403,7 +430,7 @@
                         <div class="footer__widget-content">
                            <div class="footer__link footer__link-2">
                               <ul>
-                                 <li><a href="/visa">Admission support</a></li>
+                                 <li><a href="/how-to-apply">Admission support</a></li>
                                  <li><a href="/visa">Visa</a></li>
                                  <li><a href="/faq">Faqs</a></li>
                                  

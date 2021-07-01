@@ -27,6 +27,10 @@ app.get("/contact", (req, res) => {
   res.render(( "contact"));
 });
 
+app.get("/how-to-apply", (req, res) => {
+  res.render(( "apply"));
+});
+
 app.get("/about", (req, res) => {
   res.render(( "about"));
 });

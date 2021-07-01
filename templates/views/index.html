@@ -23,6 +23,34 @@
       <link rel="stylesheet" href="css/translate.css">
    </head>
    <body>
+
+      <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "106322061707843");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v11.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
       
       <!-- Translate Start-->
 
@@ -62,7 +90,7 @@
                      <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6">
                         <div class="header__info text-center text-sm-start">
                            <a href=""> <i class="icon_mail"></i> <span class="__cf_email__" >fulstud@gmail.com</span></a>
-                           <a href="tel:+124-547-689"> <i class="icon_phone w-phone"></i> +123 456 789</a>
+                           <!-- <a href="tel:+124-547-689"> <i class="icon_phone w-phone"></i> +123 456 789</a> -->
                         </div>
                      </div>
                      <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6">
@@ -70,7 +98,7 @@
                            <h5>Follow us:</h5>
                            <ul>
                               <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                              <li><a href="#"><i class="fab fa-blogger"></i></a></li>
                               <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                               <li><a href="#"><i class="fab fa-telegram"></i></a></li>
                               
@@ -98,13 +126,13 @@
                                     <a href="index.html">Home</a>
                                     
                                  </li> -->
-                                 <li><a href="/about">About Us</a></li>
+                                 <li><a href="/about">About</a></li>
                                  <li>
                                     <a href="/services">Our Services</a>
                                     
                                  </li>
                                  <li>
-                                    <a href="https://blog.fulstud.com/" target="_blank">Blog</a>
+                                    <a href="/how-to-apply">Admission</a>
    
                                     
                                  </li>
@@ -215,7 +243,7 @@
                         <p class="wow fadeInUp" data-wow-delay=".5s">We created Fulstud, because we consider studying the most valuable thing in our life. We love to help students to study in the country of their choice. Moreover, we are always working to turn studying abroad accessible to everyone and provide our customers with top quality service!</p>
 
                         <div class="hero__btn d-sm-flex align-items-center">
-                           <a href="/countries" class="w-btn w-btn-6 w-btn-white w-btn-white-4 mr-30 wow fadeInUp" data-wow-delay=".7s">View our work</a>
+                           <a href="/about" class="w-btn w-btn-6 w-btn-white w-btn-white-4 mr-30 wow fadeInUp" data-wow-delay=".7s">Discover</a>
                            <a href="/contact" class="w-btn w-btn-6 w-btn-white w-btn-white-4 mr-30 wow fadeInUp" data-wow-delay=".7s">Call me back</a>
                         </div>
                      </div>
@@ -704,7 +732,7 @@
                         <div class="footer__widget-content">
                            <div class="footer__link footer__link-3">
                               <ul>
-                                 <li><a href="/visa">Admission Support</a></li>
+                                 <li><a href="/how-to-apply">Admission Support</a></li>
                                  <!-- <li><a href="#">Invitation letter</a></li> -->
                                  <li><a href="/visa">Visas</a></li>
                                  <li><a href="/faq">FAQs</a></li>
@@ -738,9 +766,10 @@
                         <div class="footer__widget-content">
                            <div class="footer__social footer__social-5">
                               <ul>
-                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                 <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                                 <li><a href="https://www.facebook.com/fulstud/"><i class="fab fa-facebook-f"></i></a></li>
+                                 <!-- <li><a href="#"><i class="fab fa-whatsapp"></i></a></li> -->
                                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                 <li><a href="#"><i class="fab fa-telegram"></i></a></li>
                               </ul>
                            </div>
                         </div>

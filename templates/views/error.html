@@ -27,6 +27,34 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "106322061707843");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v11.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
     <!-- Translate Start-->
 
     <div id="google_translate_element"></div>
@@ -80,7 +108,7 @@
                       <a href="/services">Services</a>
                     </li>
                     <li>
-                      <a href="/blog">Blog</a>
+                      <a href="/how-to-apply">Admission</a>
                     </li>
                     <li>
                       <a href="/about">More</a>
