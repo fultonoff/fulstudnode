@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const cons = require('consolidate');
+
 const app = express();
 const port = process.env.PORT|| 5000;
 
@@ -15,24 +16,25 @@ app.engine('html', cons.swig)
 app.set('views', viewsPath);
 app.set('view engine', 'html');
 
+
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath))
 
 // app.use("/public", express.static(path.join(__dirname, "./public")));
 app.get("/", (req, res) => {
-  res.render(( "index"));
+  res.render( "index");
 });
 
 app.get("/contact", (req, res) => {
-  res.render(( "contact"));
+  res.render( "contact");
 });
 
 app.get("/how-to-apply", (req, res) => {
-  res.render(( "apply"));
+  res.render( "apply");
 });
 
 app.get("/about", (req, res) => {
-  res.render(( "about"));
+  res.render( "about");
 });
 
 app.get("/faq", (req, res) => {
