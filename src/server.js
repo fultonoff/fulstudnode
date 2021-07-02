@@ -63,6 +63,10 @@ app.get("/terms", (req, res) => {
   res.render(( "terms"));
 });
 
+app.get("/scholarship", (req, res) => {
+  res.render(( "scholarship"));
+});
+
 app.get("*", (req, res) => {
   res.render(( '404', "error"));
 });
